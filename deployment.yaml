@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lms-system-deployment
+spec:
+  replicas: 3  # Number of desired replicas
+  selector:
+    matchLabels:
+      app: lms-system
+  template:
+    metadata:
+      labels:
+        app: lms-system
+    spec:
+      containers:
+      - name: lms-system
+        image: yash5090/lms-system:latest
+        ports:
+        - containerPort: 5000
