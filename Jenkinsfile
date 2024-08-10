@@ -214,6 +214,16 @@ pipeline {
                 //}
             }
         }
+
+        stage('Docker Scout Artifacts Analysis') {
+            steps {
+                script{
+                  withDockerRegistry(credentialsId: 'docker', toolName: 'docker'){
+                      sh 'docker-scout sbom yash5090/btry-indi:latest'
+                    }
+                }   
+            }
+        }
         
         stage ('Manual Approval'){
           steps {
