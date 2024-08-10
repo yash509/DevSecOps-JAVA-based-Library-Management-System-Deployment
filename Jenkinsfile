@@ -135,7 +135,7 @@ pipeline {
             steps {
                 script{
                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker'){
-                       sh 'docker-scout quickview fs://.'
+                       sh 'docker-scout quickview'
                    }
                 }   
             }
@@ -145,7 +145,7 @@ pipeline {
             steps {
                 script{
                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker'){
-                       sh 'docker-scout cves fs://.'
+                       sh 'docker-scout cves'
                    }
                 }   
             }
@@ -219,7 +219,7 @@ pipeline {
             steps {
                 script{
                   withDockerRegistry(credentialsId: 'docker', toolName: 'docker'){
-                      sh 'docker-scout sbom yash5090/btry-indi:latest'
+                      sh 'docker-scout sbom yash5090/lms-system:latest'
                     }
                 }   
             }
