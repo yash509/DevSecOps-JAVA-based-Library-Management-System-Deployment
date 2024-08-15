@@ -1,4 +1,4 @@
-# Library Management System using JAVA
+# DevSecOps-JAVA-based-Library-Management-System-Deployment
 Deploying a Library Management System on Docker and Kubernetes using Jenkins CI/CD Pipeline.
 
 This project is a Library Management System built using Java Spring Boot, H2 Database, and Thymeleaf. It allows users to manage authors, publishers, categories, and books, including adding, deleting, and updating these entities.
